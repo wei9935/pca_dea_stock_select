@@ -1,4 +1,3 @@
-
 import pandas as pd
 from models import *
 from fin_utils import *
@@ -7,8 +6,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 if __name__=='__main__':
-    file = 'full_data.csv'
-    data = pd.read_csv(file)
+    data = pd.read_csv('data/full_data.csv')
 
     # Define Inputs and Outputs.
     in_list = ['流動比率', '速動比率', '利息支出率', '負債比率', 
@@ -106,11 +104,12 @@ if __name__=='__main__':
     plt.bar(index + bar_width, ineff_ret, bar_width, label='Inefficient')
     plt.xlabel('Sectors'), plt.ylabel('Returns')
     plt.xlabel(rotation=90)
-    plt.title('Comparison of Efficient and Inefficient Portfolios\' Returns')
+    plt.title('Comparison of Efficient and Inefficient Portfolios\' Annual Returns')
     plt.xticks(index + bar_width / 2, sectors)
 
     plt.legend()
-    plt.show()
+    #plt.show()
+    plt.savefig('result/compare_plot.png')
 
     # compare performance metrics
     eff_val_df, ineff_val_df = pd.DataFrame(eff_port_values).ffill(), pd.DataFrame(ineff_port_values).ffill()
