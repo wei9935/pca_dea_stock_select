@@ -1,2 +1,5 @@
 venv/
 .DS_Store
+clean.py
+/quantstats_utils
+/__pycache__
