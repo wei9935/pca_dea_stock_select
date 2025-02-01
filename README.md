@@ -17,10 +17,12 @@ Using PCA(Principle Component Analysis) and DEA(Data Envelope Analysis) techniqu
 
 ## Methodology
 ### PCA
-* Priciple component analysis
-* 
+* A dimensionality reduction technique that transforms correlated variables into a smaller set of uncorrelated components while preserving maximum variance.
+* We used this technique to transform fundemental data of many companies.
+  
 ### DEA
-* Data envelope analysis
+* A non-parametric method for evaluating the efficiency of decision-making-units(dmu) by comparing input-output ratios.
+* We treat each company as a dmu, and evaluate its relative efficiency.
   
 ### Evaluation
 * Compare top N efficient firms and the least N efficient firms.
